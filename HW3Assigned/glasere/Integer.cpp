@@ -3,9 +3,7 @@
 
 Integer::Integer(int v) : value(new int(v)) {}
 
-Integer::Integer( ) {
-   value == nullptr;
-}
+Integer::Integer( ) : value(nullptr) {}
 
 Integer::~Integer( ) {
    std::cout << "Integer" << std::endl;

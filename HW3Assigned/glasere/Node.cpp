@@ -10,9 +10,7 @@ Node::~Node( ) {
    std::cout << "Node" << std::endl;
 }
 
-Node::Node(int v) {
-   value = new Integer(v), nextNode = nullptr; 
-}
+Node::Node(int v) : value(new Integer(v)), nextNode(nullptr) {}
 
 Node* Node::next( ) {
    return nextNode;
