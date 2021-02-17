@@ -9,9 +9,11 @@ int main(int argc, char** args) {
                                std::string("NY"), 10598);
    std::cout << "add1:\n"+add1.getAddress( ) << std::endl;
    std::cout << "add2:\n"+add2.getAddress( ) << std::endl;
+   Address& add1R = add1;
+   Address& add2R = add2;
    
-   Employee emp1 = Employee(std::string("Jerry Jeff Walker"), 3, 16, 1942, add1, 55000);
-   Employee emp2 = Employee(std::string("Fran Allen"), 8, 4, 1932, add2, 256000);
+   Employee emp1 = Employee(std::string("Jerry Jeff Walker"), 3, 16, 1942, add1R, 55000);
+   Employee emp2 = Employee(std::string("Fran Allen"), 8, 4, 1932, add2R, 256000);
 
    std::cout << "Employee1: " << emp1.getRole( ) << ", " << emp1.getName( ) << ", ";
    std::cout << emp1.getZipCode( ) << std::endl;
