@@ -1,6 +1,8 @@
 #ifndef ARRAY2D_H_
 #define ARRAY2D_H_
 #include <iostream>
+#include <cstdlib>
+#include <string>
 class Array2D {
 
 public:
