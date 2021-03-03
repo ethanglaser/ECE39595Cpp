@@ -11,16 +11,16 @@ COMMANDLINE =
 
 .PHONY : run
 run : $(EXECUTABLE)
-    ./$(EXECUTABLE) $(COMMANDLINE)
+	./$(EXECUTABLE) $(COMMANDLINE)
 
 cleanmake : clean HW6
 
 .PHONY : $(EXECUTABLE)
 $(EXECUTABLE) :  $(OBJS)
-    $(CC) $(CFLAGS) -o $(EXECUTABLE) $(OBJS) $(INCLUDE) $(LIBS)
+	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OBJS) $(INCLUDE) $(LIBS)
 
 %.o : %.cpp 
-    $(CC) $(CFLAGS) -c $< $(INCLUDE) $(LIBS)
+	$(CC) $(CFLAGS) -c $< $(INCLUDE) $(LIBS)
 
 clean :
 	rm $(EXECUTABLE) ${OBJS} 

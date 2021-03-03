@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include "Array2D.H"
+#include "Array2D.h"
 
 // The character parameter exists to give this a different signature than any of 
 // the public constructors.
@@ -107,6 +107,8 @@ bool Array2D::operator==(Array2D& other) {
 }
 
 Array2D::Array2D(const Array2D& other) {
+   numRows = other.getNumRows();
+   numCols = other.getNumCols();
    ary = new int*[numRows];
    for (int i = 0; i < numRows; i++) {
       ary[i] = new int[numCols];
@@ -127,10 +129,10 @@ Array2D::~Array2D() {
    this->deleteAry(this->ary);
 }
 
-int Array2D::getNumRows() {
+int Array2D::getNumRows() const {
    return numRows;
 }
 
-int Array2D::getNumCols() {
+int Array2D::getNumCols() const {
    return numCols;
 }

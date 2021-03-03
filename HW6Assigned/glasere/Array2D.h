@@ -13,8 +13,8 @@ public:
 
    virtual int& operator( )(int row, int col);
    virtual int operator( )(int row, int col) const;
-   virtual int getNumRows();
-   virtual int getNumCols();
+   virtual int getNumRows() const;
+   virtual int getNumCols() const;
    virtual Array2D& operator*(Array2D& other);
    virtual bool operator==(Array2D& other);
    virtual Array2D& operator=(Array2D& other);
