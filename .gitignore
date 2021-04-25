@@ -32,3 +32,6 @@
 *.app
 
 *.log
+
+lrvalue/*
+HW11*
